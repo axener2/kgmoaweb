@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>KGMOA — Kerala Government Medical Officers Association</title>
+  <meta name="description" content="KGMOA — advancing public healthcare in Kerala through leadership, learning, and member services." />
+  <meta name="theme-color" content="#0b3a63" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Cdefs%3E%3ClinearGradient id=%27g%27 x1=%270%27 y1=%270%27 x2=%271%27 y2=%271%27%3E%3Cstop stop-color=%27%230b3a63%27/%3E%3Estop offset=%271%27 stop-color=%27%23082a47%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx=%2732%27 cy=%2732%27 r=%2732%27 fill=%27url(%23g)%27/%3E%3Cpath d=%27M32 14a10 10 0 0 1 10 10v3h2a3 3 0 0 1 0 6h-2v3a10 10 0 1 1-20 0v-3h-2a3 3 0 0 1 0-6h2v-3a10 10 0 0 1 10-10Z%27 fill=%27%23d4af37%27/%3E%3C/svg%3E" />
+  <meta property="og:title" content="KGMOA — Kerala Government Medical Officers Association" />
+  <meta property="og:description" content="Official KGMOA site — news, events, districts, resources, and member services." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://placehold.co/1200x630/png?text=KGMOA" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial'] },
+          colors: {
+            brand: { 600:'#0f4c81',700:'#0b3a63',800:'#082a47',900:'#061c32' },
+            accent: { 400:'#e5c86f',500:'#d4af37',600:'#b8941f' }
+          },
+          boxShadow: {
+            card:'0 14px 36px rgba(2,6,23,.10)',
+            soft:'0 10px 26px rgba(2,6,23,.08)',
+            glow:'0 18px 48px rgba(15,76,129,.25)'
+          },
+          backgroundImage: {
+            heroGrad: 'radial-gradient(1400px 500px at 50% -200px, rgba(212,175,55,.20), rgba(8,42,71,0))',
+            stripe: 'repeating-linear-gradient(45deg, rgba(212,175,55,.08) 0 10px, transparent 10px 20px)'
+          },
+          animation: {
+            fadeUp: 'fadeUp .6s ease-out both',
+            float: 'float 6s ease-in-out infinite'
+          },
+          keyframes: {
+            fadeUp: { '0%':{opacity:0, transform:'translateY(10px)'}, '100%':{opacity:1, transform:'translateY(0)'} },
+            float: { '0%':{transform:'translateY(0)'}, '50%':{transform:'translateY(-6px)'}, '100%':{transform:'translateY(0)'} }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html{scroll-behavior:smooth}
+    .nav-active{color:#0b3a63!important}
+    .glass{backdrop-filter:saturate(120%) blur(10px)}
+  </style>
+
+  <!-- Schema.org (Organization) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Kerala Government Medical Officers Association (KGMOA)",
+    "url":"https://kgmoa.org",
+    "logo":"https://kgmoa.org/logo.png",
+    "contactPoint":{"@type":"ContactPoint","contactType":"administration","email":"info@kgmoa.org","areaServed":"IN-KL"}
+  }
+  </script>
+</head>
+<body class="min-h-full bg-slate-50 text-slate-900">
+
+  <!-- Header / Nav -->
+  <header class="sticky top-0 z-50 border-b border-slate-200 bg-white/80 backdrop-blur glass">
+    <div class="mx-auto max-w-6xl px-4">
+      <div class="flex h-16 items-center justify-between">
+        <a href="#home" class="group flex items-center gap-3">
+          <span class="inline-grid h-10 w-10 place-content-center rounded-xl bg-gradient-to-br from-brand-700 to-brand-800 text-white shadow-soft group-hover:shadow-glow transition-shadow">
+            <svg width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 1 7 7v2h1a2 2 0 0 1 0 4h-1v2a7 7 0 1 1-14 0v-2H4a2 2 0 0 1 0-4h1V9a7 7 0 0 1 7-7Z"/></svg>
+          </span>
+          <div>
+            <p class="text-[15px] font-extrabold tracking-tight">KGMOA</p>
+            <p class="text-[11px] -mt-1 text-slate-500">Kerala Government Medical Officers Association</p>
+          </div>
+        </a>
+
+        <nav class="hidden gap-6 md:flex text-sm font-medium">
+          <a href="#about" class="hover:text-brand-700">About</a>
+          <a href="#leadership" class="hover:text-brand-700">Leadership</a>
+          <a href="#districts" class="hover:text-brand-700">Districts</a>
+          <a href="#news" class="hover:text-brand-700">News</a>
+          <a href="#events" class="hover:text-brand-700">Events</a>
+          <a href="#resources" class="hover:text-brand-700">Resources</a>
+          <a href="#contact" class="hover:text-brand-700">Contact</a>
+          <a href="#member" class="rounded-lg bg-brand-700 px-3 py-1.5 text-white shadow-soft hover:shadow-glow">Member Login</a>
+        </nav>
+
+        <!-- Mobile menu button -->
+        <button id="menuBtn" class="md:hidden rounded-lg border border-slate-200 p-2">
+          <span class="sr-only">Open menu</span>
+          <svg class="h-5 w-5" viewBox="0 0 24 24"><path fill="currentColor" d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobileNav" class="hidden border-t border-slate-200 bg-white md:hidden">
+      <nav class="mx-auto max-w-6xl px-4 py-3 grid gap-2 text-sm">
+        <a href="#about" class="py-1">About</a>
+        <a href="#leadership" class="py-1">Leadership</a>
+        <a href="#districts" class="py-1">Districts</a>
+        <a href="#news" class="py-1">News</a>
+        <a href="#events" class="py-1">Events</a>
+        <a href="#resources" class="py-1">Resources</a>
+        <a href="#contact" class="py-1">Contact</a>
+        <a href="#member" class="mt-1 rounded-lg bg-brand-700 px-3 py-2 text-center font-medium text-white">Member Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="relative overflow-hidden border-b border-slate-200 bg-white">
+    <div class="absolute inset-0 bg-heroGrad pointer-events-none"></div>
+
+    <!-- Decorative wave -->
+    <svg class="absolute -bottom-12 left-1/2 -translate-x-1/2 w-[120%] opacity-20" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true">
+      <path fill="#0b3a63" d="M0,160L60,170.7C120,181,240,203,360,186.7C480,171,600,117,720,122.7C840,128,960,192,1080,224C1200,256,1320,256,1380,256L1440,256L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"/>
+    </svg>
+
+    <div class="relative mx-auto max-w-6xl px-4 pt-12 pb-16 md:pt-20 md:pb-24 grid gap-10 md:grid-cols-2">
+      <div class="animate-fadeUp">
+        <span class="inline-flex items-center gap-2 rounded-full border border-accent-500/40 bg-accent-500/10 px-3 py-1 text-[12px] font-semibold text-brand-800">
+          <span class="h-2 w-2 rounded-full bg-accent-500"></span> Public Health • Service • Leadership
+        </span>
+        <h1 class="mt-3 text-3xl font-extrabold tracking-tight text-slate-900 md:text-5xl">
+          Strengthening Kerala’s Public Healthcare — Together.
+        </h1>
+        <p class="mt-4 max-w-prose text-slate-600 md:text-lg">
+          KGMOA unites government medical officers across Kerala to advance quality, equity, and resilience through ethical leadership, continuous learning, and member support.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#events" class="rounded-xl bg-brand-700 px-5 py-3 text-white shadow-soft hover:shadow-glow">Upcoming Events</a>
+          <a href="#news" class="rounded-xl border border-slate-300 px-5 py-3">Latest Updates</a>
+        </div>
+      </div>
+
+      <div class="relative animate-fadeUp [animation-delay:.1s]">
+        <div class="rounded-2xl bg-gradient-to-br from-brand-700 to-brand-800 p-6 text-white shadow-card">
+          <div class="flex items-center justify-between">
+            <h3 class="text-lg font-semibold">Member Spotlight</h3>
+            <span class="rounded-md bg-accent-500/20 px-2 py-1 text-[11px] font-semibold text-accent-400">Impact</span>
+          </div>
+          <p class="mt-2 text-sm/6 text-white/90">
+            District quality initiative improved immunization session efficiency by 18% with better cold-chain oversight and workflow redesign.
+          </p>
+          <div class="mt-4 flex items-center gap-3">
+            <span class="inline-grid h-10 w-10 place-content-center rounded-xl bg-white/15 ring-1 ring-white/20">KG</span>
+            <div class="text-xs/5">
+              <p class="font-semibold">Kottayam District</p>
+              <p class="text-white/80">PHC Improvement Drive</p>
+            </div>
+          </div>
+        </div>
+        <div class="pointer-events-none absolute -right-4 -top-4 h-16 w-16 rounded-xl bg-stripe opacity-60 animate-float"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="bg-slate-50">
+    <div class="mx-auto max-w-6xl px-4 py-14 grid gap-10 md:grid-cols-3">
+      <div class="md:col-span-2">
+        <h2 class="text-2xl font-bold">About KGMOA</h2>
+        <p class="mt-3 text-slate-700">
+          Kerala Government Medical Officers Association (KGMOA) represents government doctors statewide. We collaborate with stakeholders to strengthen primary and secondary care, drive health system improvements, and support professional growth.
+        </p>
+        <ul class="mt-5 grid gap-2 text-slate-700 md:grid-cols-2">
+          <li>• Advocacy for robust public health infrastructure</li>
+          <li>• Continuous professional development & CME</li>
+          <li>• Ethical, patient-centric leadership</li>
+          <li>• Research, innovation & quality</li>
+        </ul>
+      </div>
+      <div class="rounded-2xl bg-white p-6 shadow-card ring-1 ring-slate-200">
+        <h3 class="text-lg font-semibold">Focus Areas</h3>
+        <ul class="mt-3 space-y-2 text-sm text-slate-700">
+          <li>✓ Primary care strengthening</li>
+          <li>✓ Equity & access</li>
+          <li>✓ Quality & safety</li>
+          <li>✓ Training & mentorship</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leadership -->
+  <section id="leadership" class="border-t border-slate-200 bg-white">
+    <div class="mx-auto max-w-6xl px-4 py-14">
+      <h2 class="text-2xl font-bold">State Leadership</h2>
+      <div class="mt-8 grid gap-5 sm:grid-cols-2 md:grid-cols-4">
+        <div class="rounded-2xl bg-white p-5 ring-1 ring-slate-200 shadow-soft hover:shadow-card transition">
+          <div class="flex items-center gap-3">
+            <img src="https://placehold.co/72x72/png" class="h-16 w-16 rounded-xl object-cover" alt="Profile"/>
+            <div>
+              <p class="font-semibold">Dr Sunil P K</p>
+              <p class="text-sm text-slate-500">President</p>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-2xl bg-white p-5 ring-1 ring-slate-200 shadow-soft hover:shadow-card transition">
+          <div class="flex items-center gap-3">
+            <img src="https://placehold.co/72x72/png" class="h-16 w-16 rounded-xl object-cover" alt="Profile"/>
+            <div>
+              <p class="font-semibold">Dr Jobin Joseph</p>
+              <p class="text-sm text-slate-500">General Secretary</p>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-2xl bg-white p-5 ring-1 ring-slate-200 shadow-soft hover:shadow-card transition">
+          <div class="flex items-center gap-3">
+            <img src="https://placehold.co/72x72/png" class="h-16 w-16 rounded-xl object-cover" alt="Profile"/>
+            <div>
+              <p class="font-semibold">Dr D Srikanth</p>
+              <p class="text-sm text-slate-500">Treasurer</p>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-2xl bg-white p-5 ring-1 ring-slate-200 shadow-soft hover:shadow-card transition">
+          <div class="flex items-center gap-3">
+            <img src="https://placehold.co/72x72/png" class="h-16 w-16 rounded-xl object-cover" alt="Profile"/>
+            <div>
+              <p class="font-semibold">Dr Bejoy C P</p>
+              <p class="text-sm text-slate-500">Managing Editor</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="mt-6 text-xs text-slate-500">District office-bearers are listed in the Districts section.</p>
+    </div>
+  </section>
+
+  <!-- Districts -->
+  <section id="districts" class="border-t border-slate-200 bg-slate-50">
+    <div class="mx-auto max-w-6xl px-4 py-14">
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <h2 class="text-2xl font-bold">Districts</h2>
+          <p class="mt-2 text-slate-700">Browse district contacts and local updates.</p>
+        </div>
+        <select id="districtSelect" class="rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm">
+          <option value="statewide">All Kerala</option>
+          <option value="ktm" selected>Kottayam</option>
+          <option value="ern">Ernakulam</option>
+          <option value="tcr">Thrissur</option>
+          <option value="koz">Kozhikode</option>
+          <option value="kgd">Kasaragod</option>
+        </select>
+      </div>
+
+      <div id="districtCards" class="mt-6 grid gap-5 sm:grid-cols-2 md:grid-cols-3">
+        <article class="district-card rounded-2xl bg-white p-5 ring-1 ring-slate-200 shadow-soft hover:shadow-card transition" data-district="ktm">
+          <h3 class="font-semibold">Kottayam</h3>
+          <p class="mt-1 text-sm text-slate-600">President: Dr Preetha S Y</p>
+          <div class="mt-3 flex gap-2">
+            <a href="tel:+919000000000" class="rounded-lg bg-emerald-600 px-3 py-1.5 text-xs font-semibold text-white">Call</a>
+            <a href="https://wa.me/919000000000" class="rounded-lg bg-emerald-700 px-3 py-1.5 text-xs font-semibold text-white">WhatsApp</a>
+          </div>
+        </article>
+
+        <article class="district-card rounded-2xl bg-white p-5 ring-1 ring-slate-200 shadow-soft hover:shadow-card transition" data-district="ern">
+          <h3 class="font-semibold">Ernakulam</h3>
+          <p class="mt-1 text-sm text-slate-600">President: Dr Rahul K</p>
+          <div class="mt-3 flex gap-2">
+            <a href="tel:+919111111111" class="rounded-lg bg-emerald-600 px-3 py-1.5 text-xs font-semibold text-white">Call</a>
+            <a href="https://wa.me/919111111111" class="rounded-lg bg-emerald-700 px-3 py-1.5 text-xs font-semibold text-white">WhatsApp</a>
+          </div>
+        </article>
+
+        <article class="district-card rounded-2xl bg-white p-5 ring-1 ring-slate-200 shadow-soft hover:shadow-card transition" data-district="tcr">
+          <h3 class="font-semibold">Thrissur</h3>
+          <p class="mt-1 text-sm text-slate-600">President: Dr Anita V</p>
+          <div class="mt-3 flex gap-2">
+            <a href="tel:+919222222222" class="rounded-lg bg-emerald-600 px-3 py-1.5 text-xs font-semibold text-white">Call</a>
+            <a href="https://wa.me/919222222222" class="rounded-lg bg-emerald-700 px-3 py-1.5 text-xs font-semibold text-white">WhatsApp</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- News -->
+  <section id="news" class="border-t border-slate-200 bg-white">
+    <div class="mx-auto max-w-6xl px-4 py-14">
+      <div class="flex items-end justify-between">
+        <h2 class="text-2xl font-bold">News & Updates</h2>
+        <a href="#" class="text-sm text-brand-700">View all</a>
+      </div>
+
+      <div class="mt-6 grid gap-5 md:grid-cols-3">
+        <article class="rounded-2xl bg-white p-5 ring-1 ring-slate-200 shadow-soft hover:shadow-card transition">
+          <p class="text-xs text-slate-500">Nov 15, 2025</p>
+          <h3 class="mt-1 font-semibold">CME registrations open</h3>
+          <p class="mt-2 text-sm text-slate-700">State CME at Ernakulam Town Hall. Limited seats.</p>
+          <a href="#events" class="mt-3 inline-block text-sm text-brand-700">Register →</a>
+        </article>
+
+        <article class="rounded-2xl bg-white p-5 ring-1 ring-slate-200 shadow-soft hover:shadow-card transition">
+          <p class="text-xs text-slate-500">Nov 10, 2025</p>
+          <h3 class="mt-1 font-semibold">Public health outreach week</h3>
+          <p class="mt-2 text-sm text-slate-700">Multi-district vaccination & NCD screening drive.</p>
+          <a href="#" class="mt-3 inline-block text-sm text-brand-700">Read more →</a>
+        </article>
+
+        <article class="rounded-2xl bg-white p-5 ring-1 ring-slate-200 shadow-soft hover:shadow-card transition">
+          <p class="text-xs text-slate-500">Nov 01, 2025</p>
+          <h3 class="mt-1 font-semibold">OPD efficiency recommendations</h3>
+          <p class="mt-2 text-sm text-slate-700">Triage, crowd flow, and e-queue suggestions.</p>
+          <a href="#" class="mt-3 inline-block text-sm text-brand-700">Read more →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events -->
+  <section id="events" class="border-t border-slate-200 bg-slate-50">
+    <div class="mx-auto max-w-6xl px-4 py-14">
+      <div class="flex items-end justify-between">
+        <h2 class="text-2xl font-bold">Events</h2>
+        <select id="eventFilter" class="rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm">
+          <option value="all">All</option>
+          <option value="state">State</option>
+          <option value="district">District</option>
+          <option value="training">Training</option>
+        </select>
+      </div>
+
+      <div id="eventList" class="mt-6 grid gap-5 md:grid-cols-2">
+        <article class="event-card rounded-2xl bg-white p-5 ring-1 ring-slate-200 shadow-soft hover:shadow-card transition" data-type="state">
+          <h3 class="font-semibold">State CME — Ernakulam</h3>
+          <p class="mt-1 text-sm text-slate-600">Nov 15, 9:30 AM • Town Hall</p>
+          <div class="mt-3 flex gap-2">
+            <a href="#" class="rounded-lg bg-brand-700 px-3 py-1.5 text-xs font-semibold text-white">Register</a>
+            <a href="#" class="rounded-lg border border-slate-300 px-3 py-1.5 text-xs">Add to Calendar</a>
+          </div>
+        </article>
+
+        <article class="event-card rounded-2xl bg-white p-5 ring-1 ring-slate-200 shadow-soft hover:shadow-card transition" data-type="district">
+          <h3 class="font-semibold">District Meet — Kottayam</h3>
+          <p class="mt-1 text-sm text-slate-600">Nov 10, 6:30 PM • GH Hall</p>
+          <div class="mt-3 flex gap-2">
+            <a href="#" class="rounded-lg bg-brand-700 px-3 py-1.5 text-xs font-semibold text-white">RSVP</a>
+            <a href="#" class="rounded-lg border border-slate-300 px-3 py-1.5 text-xs">Add to Calendar</a>
+          </div>
+        </article>
+
+        <article class="event-card rounded-2xl bg-white p-5 ring-1 ring-slate-200 shadow-soft hover:shadow-card transition" data-type="training">
+          <h3 class="font-semibold">BLS Refresher</h3>
+          <p class="mt-1 text-sm text-slate-600">Dec 02, 2:00 PM • District HQ</p>
+          <div class="mt-3 flex gap-2">
+            <a href="#" class="rounded-lg bg-brand-700 px-3 py-1.5 text-xs font-semibold text-white">Enroll</a>
+            <a href="#" class="rounded-lg border border-slate-300 px-3 py-1.5 text-xs">Details</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resources -->
+  <section id="resources" class="border-t border-slate-200 bg-white">
+    <div class="mx-auto max-w-6xl px-4 py-14">
+      <h2 class="text-2xl font-bold">Resources</h2>
+      <p class="mt-2 text-slate-700">Guidelines, forms, and useful links for members.</p>
+
+      <div class="mt-6 grid gap-5 md:grid-cols-3">
+        <a class="rounded-2xl bg-white p-5 ring-1 ring-slate-200 shadow-soft hover:ring-brand-700 hover:shadow-card transition" href="#">
+          <h3 class="font-semibold">Clinical Establishments — Quick Checklist</h3>
+          <p class="mt-2 text-sm text-slate-600">Essential compliance pointers for clinics.</p>
+          <span class="mt-3 inline-block text-sm text-brand-700">Download PDF →</span>
+        </a>
+
+        <a class="rounded-2xl bg-white p-5 ring-1 ring-slate-200 shadow-soft hover:ring-brand-700 hover:shadow-card transition" href="#">
+          <h3 class="font-semibold">CME Policy & CPD Credits</h3>
+          <p class="mt-2 text-sm text-slate-600">Eligibility, application, and FAQs.</p>
+          <span class="mt-3 inline-block text-sm text-brand-700">Read →</span>
+        </a>
+
+        <a class="rounded-2xl bg-white p-5 ring-1 ring-slate-200 shadow-soft hover:ring-brand-700 hover:shadow-card transition" href="#">
+          <h3 class="font-semibold">Member Services</h3>
+          <p class="mt-2 text-sm text-slate-600">ID download, dues, profile corrections.</p>
+          <span class="mt-3 inline-block text-sm text-brand-700">Go to portal →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Member -->
+  <section id="contact" class="border-t border-slate-200 bg-slate-50">
+    <div class="mx-auto max-w-6xl px-4 py-14 grid gap-10 md:grid-cols-2">
+      <div>
+        <h2 class="text-2xl font-bold">Contact</h2>
+        <p class="mt-2 text-slate-700">Media, administration, and member queries.</p>
+
+        <div class="mt-4 space-y-2 text-sm text-slate-700">
+          <p>Email: <a href="mailto:info@kgmoa.org" class="text-brand-700 underline">info@kgmoa.org</a></p>
+          <p>Address: KGMOA State HQ, Thiruvananthapuram, Kerala</p>
+        </div>
+
+        <form id="contactForm" class="mt-6 space-y-3">
+          <input required type="text" name="name" placeholder="Your Name" class="w-full rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-sm">
+          <input required type="email" name="email" placeholder="Email" class="w-full rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-sm">
+          <textarea required name="message" placeholder="Message" class="w-full rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-sm" rows="4"></textarea>
+          <button class="rounded-xl bg-brand-700 px-4 py-2.5 text-sm font-semibold text-white shadow-soft hover:shadow-glow">Send</button>
+          <p id="contactMsg" class="text-sm text-emerald-700"></p>
+        </form>
+      </div>
+
+      <div id="member" class="rounded-2xl bg-white p-6 shadow-card ring-1 ring-slate-200">
+        <h3 class="text-lg font-semibold">Member Portal</h3>
+        <p class="mt-2 text-sm text-slate-600">Access digital ID, manage dues, and update your profile.</p>
+        <div class="mt-4 space-y-3">
+          <input type="email" placeholder="Email (official)" class="w-full rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-sm">
+          <input type="password" placeholder="Password" class="w-full rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-sm">
+          <button class="w-full rounded-xl bg-brand-700 px-4 py-2.5 text-sm font-semibold text-white shadow-soft hover:shadow-glow">Login</button>
+          <button class="w-full rounded-xl border border-slate-300 px-4 py-2.5 text-sm">Create Account</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-200 bg-white">
+    <div class="mx-auto max-w-6xl px-4 py-10 grid gap-8 md:grid-cols-4">
+      <div>
+        <div class="flex items-center gap-2">
+          <span class="inline-grid h-9 w-9 place-content-center rounded-lg bg-gradient-to-br from-brand-700 to-brand-800 text-white">KG</span>
+          <strong>KGMOA</strong>
+        </div>
+        <p class="mt-3 text-sm text-slate-600">Kerala Government Medical Officers Association</p>
+      </div>
+
+      <div>
+        <h4 class="font-semibold">Explore</h4>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a href="#about" class="hover:text-brand-700">About</a></li>
+          <li><a href="#leadership" class="hover:text-brand-700">Leadership</a></li>
+          <li><a href="#districts" class="hover:text-brand-700">Districts</a></li>
+          <li><a href="#events" class="hover:text-brand-700">Events</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-semibold">Resources</h4>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a href="#resources" class="hover:text-brand-700">Guidelines</a></li>
+          <li><a href="#resources" class="hover:text-brand-700">Forms</a></li>
+          <li><a href="#resources" class="hover:text-brand-700">Member Services</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-semibold">Stay Updated</h4>
+        <form id="subForm" class="mt-3 flex gap-2">
+          <input type="email" required placeholder="Email" class="w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm">
+          <button class="rounded-xl bg-accent-500 px-3 py-2 text-sm font-semibold text-slate-900 shadow-soft">Subscribe</button>
+        </form>
+        <p id="subMsg" class="mt-2 text-sm text-emerald-700"></p>
+      </div>
+    </div>
+    <div class="border-t border-slate-200 py-4 text-center text-xs text-slate-500">
+      © <span id="year"></span> KGMOA. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Mobile nav
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    menuBtn?.addEventListener('click', ()=> mobileNav.classList.toggle('hidden'));
+
+    // Active link on scroll
+    const sections = ['home','about','leadership','districts','news','events','resources','contact'];
+    const links = Array.from(document.querySelectorAll('header nav a[href^="#"]'));
+    const onScroll = () => {
+      let current = 'home';
+      const fromTop = window.scrollY + 90;
+      sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el && el.offsetTop <= fromTop) current = id;
+      });
+      links.forEach(a => a.classList.toggle('nav-active', a.getAttribute('href') === '#' + current));
+    };
+    document.addEventListener('scroll', onScroll, { passive: true });
+
+    // District filter
+    const distSelect = document.getElementById('districtSelect');
+    distSelect?.addEventListener('change', e => {
+      const value = e.target.value;
+      document.querySelectorAll('.district-card').forEach(card => {
+        card.style.display = (value === 'statewide' || card.dataset.district === value) ? '' : 'none';
+      });
+    });
+
+    // Event filter
+    const eventFilter = document.getElementById('eventFilter');
+    eventFilter?.addEventListener('change', e => {
+      const value = e.target.value;
+      document.querySelectorAll('.event-card').forEach(card => {
+        card.style.display = (value === 'all' || card.dataset.type === value) ? '' : 'none';
+      });
+    });
+
+    // Contact form (UX)
+    document.getElementById('contactForm')?.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const msg = document.getElementById('contactMsg');
+      msg.textContent = 'Thank you. We will get back to you shortly.';
+      e.target.reset();
+    });
+
+    // Footer year & newsletter
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('subForm')?.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      document.getElementById('subMsg').textContent = 'Subscribed successfully.';
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>
